@@ -249,6 +249,168 @@ void main(void)
    while(1);                                //Loop forever; do nothing
 }
 
+EXP 2
+Toggle p1
+#include<reg51.h>
+void main(void)
+{
+unsigned int x;
+for(;;)
+{
+P1=0x55;
+for(x=0;x<40000;x++);
+P1=0xAA;
+for(x=0;x<40000;x+t);
+}
+}
+
+EXP 2
+Write an 8051 C Program for Toggling of LED using delay timer
+
+Program:
+#include<reg51.h>
+void TIM1Delay(void);
+void main(void)
+{
+unsigned char x;
+P2=0X55;
+while(1)
+{
+P2=~p2;
+for(x=0;x<20;x++);
+TIM1Delay();
+} 
+}
+void TIM1Delay(void)
+{
+TMOD=0X10;
+TL1=OXFE;
+TH1=0XA5;
+TR1=1;
+while(TF1==0);
+TR1=0;
+TF1=0;
+}
+
+
+EXP 2
+Q) Write an 8051 C Program for BCD Counter
+
+Program:
+#include<reg51.h>
+void main(void)
+{
+P2=Ox00;
+while(1)
+{
+unsigned int z;
+for(2=0;2<-9;#+)
+P2-z;
+}
+}
+
+
+EXP 2
+
+Q) Write an 8051 C Program for HEX Counter
+
+Program:
+#include<reg51.h>
+void main(void)
+{
+P2=0x00;
+while(1)
+{
+unsigned int z;
+for(z=0;z<=15;2++)
+P2=z;
+}
+}
+
+
+EXP 3
+Exp 3 
+Q. Write a program to generate a
+square waveform.
+Program
+
+#include<reg5 1.h>
+Void delay ();
+Void main ()
+{
+While(1)
+{
+P1=0Xff,
+Delay()
+P1=0X00;
+Delay();
+}
+}
+void delay ();
+Int i,j;
+for (j=0:j<=100;j++)
+for (i=0;i<1000;i++);
+}
+
+
+
+EXP 3
+Exp 3 
+staircase Write a program waveform to generate
+a
+Program
+
+#include<reg51.h>
+void delay()
+void main()
+{
+While(1)
+{
+P2=0X00;
+Delay();
+P2-0X20
+Delay();
+P2=0X40;
+Delay();
+P2=0X60;
+Delay();
+}
+}
+void delay ()
+{unsigned int i,k,
+for (i=0;i<=1275;i++)
+for (k=0:;k<=1275;k++);
+}
+
+
+
+EXP 4
+Exp 4
+WRITE A PROGRAM FOR STEPPER MOTOR ROTATING IN CLOCKWISE DIRECTION.
+PROGRAM-
+
+#include <reg51.h>
+void MSDelay();
+void main()
+{
+while(1)
+{
+P1 = 0x66;
+MSDelay();
+P1= Ox0CC;
+MSDelay();
+P1 =0x99
+MSDelay();
+P1=0x33
+MSDelay();
+}
+}
+void MSDelay()
+funsigned int x, y;
+for(x=0;x<1275;x++)
+for(y=0;y<1000;y++);
+}
+
 
 
 
